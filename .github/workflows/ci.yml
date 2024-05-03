@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Taucher2003/GitLab-Pipeline-Action@1.8.0
+        name: Run pipeline
+        id: pipeline
+        with:
+          GL_SERVER_URL: https://gitlab.com
+          GL_PROJECT_ID: '57513325'
+          GL_RUNNER_TOKEN: ${{ secrets.GL_RUNNER_TOKEN }}
+          GL_API_TOKEN: ${{ secrets.GL_API_TOKEN }}
+          SHOW_JOB_LOGS: all
+          OVERRIDE_GITHUB_SHA: ${{ github.event_name == 'push' && github.sha || github.event.pull_request.head.sha }}
+          OVERRIDE_GITHUB_REF_NAME: ${{ github.event_name == 'push' && github.ref_name || github.event.pull_request.head.ref }}
+        env:
+          GLPA_C0_GH_REF: ${{ github.ref }}
+
+      - name: Find existing comment
+        uses: peter-evans/find-comment@v3
+        id: find-comment
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: <!-- glpa_comment:pipeline -->
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v4
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            <!-- glpa_comment:pipeline -->
+            ${{ steps.pipeline.outputs.SUMMARY_TEXT }}
+          edit-mode: replace
