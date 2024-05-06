@@ -1,7 +1,7 @@
 import React from "react";
-import {Card, Col, Container, Row, Text} from "@code0-tech/pictor";
+import {Col, Container, Row, Text} from "@code0-tech/pictor";
 import {FlowCard} from "@/components/FlowCard/FlowCard";
-import {ChildFlowSplitter, FlowSplitter, ParentFlowSplitter} from "@/components/FlowLines/FlowLines";
+import {ChildFlowSplitter, ParentFlowSplitter} from "@/components/FlowLines/FlowLines";
 
 export const FlowSection: React.FC = () => {
 
