@@ -1,93 +1,26 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import {Card, Text} from "../utils/code0-pictor";
+"use client"
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import {NextPage} from "next";
+import {Navigation} from "@/components/Navigation/Navigation";
+import {MainHeaderSection} from "@/static-components/MainHeaderSection";
+import {FlowSection} from "@/static-components/FlowSection";
+import {IntegrationsSection} from "@/static-components/IntegrationsSection";
+import {AdaptersSection} from "@/static-components/AdaptersSection";
+import {CommunitySection} from "@/static-components/CommunitySection";
+import {RoadMapSection} from "@/static-components/RoadMapSection";
 
-      <div className={styles.center}>
-        <Card variant={"outlined"}>
-          <Text size={"xl"}>
-            @code0-tech/landing-page
-          </Text>
-        </Card>
-      </div>
+const LandingPage: NextPage = () => {
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+    return <>
+        <Navigation/>
+        <MainHeaderSection/>
+        <FlowSection/>
+        <IntegrationsSection/>
+        <AdaptersSection/>
+        <CommunitySection/>
+    </>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
 }
+
+export default LandingPage;
