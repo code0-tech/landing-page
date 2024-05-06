@@ -12,6 +12,7 @@ export const FlowSection: React.FC = () => {
                     <span style={{color: "#70ffb2"}}>no-time</span></h1>
                 <Text size={"md"} display={"block"} mt={1}>
                     With our easy to use flow builder you can create complex endpoints in no-time.
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     We support every operation you can imagine or do in a "normal" programming language.
                 </Text>
                 <ul>

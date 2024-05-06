@@ -1,9 +1,8 @@
 import React from "react";
 import {Header} from "@/components/Header/Header";
-import {Badge, Button, Card, Col, Row, Text} from "@code0-tech/pictor";
-import {IconBrandDiscord, IconCheck, IconMail} from "@tabler/icons-react";
+import {Badge, Button, Card, Text} from "@code0-tech/pictor";
+import {IconBrandDiscord, IconMail} from "@tabler/icons-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export const MainHeaderSection: React.FC = () => {
 
