@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  z-index: 9;
   justify-content: center;
 
   &:before {
@@ -15,6 +16,10 @@
     border-radius: 50rem;
     border: 1px solid #70ffb2;
     z-index: 1;
+  }
+
+  &--rotate {
+    transform: rotate(180deg);
   }
 
   &__left {
@@ -42,7 +47,12 @@
   width: 100%;
   position: relative;
   display: flex;
+  z-index: 8;
   justify-content: center;
+
+  &--rotate {
+    transform: rotate(180deg);
+  }
 
   &__left {
     aspect-ratio: 1/1;

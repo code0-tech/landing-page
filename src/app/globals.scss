@@ -13,9 +13,16 @@ body {
 
 ul {
   list-style: none;
-}
+  margin-top: 1rem;
 
-li {
-  position: relative;
-  margin: 3rem 0;
+  > li {
+    margin-bottom: 1rem;
+
+    &:before {
+      position: relative;
+      color: #70ffb2;
+      margin-right: 1rem;
+      content: "✓";
+    }
+  }
 }

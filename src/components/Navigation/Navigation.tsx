@@ -16,12 +16,12 @@ export const Navigation: React.FC = () => {
                 </div>
                 <div className={styles.nav__container}>
                     <div className={styles.nav__item}>
-                        <Button color={"secondary"} variant={"none"}>
+                        <Button href={"https://discord.com/invite/vsMtqBBqC7"} color={"secondary"} variant={"none"}>
                             Discord
                         </Button>
                     </div>
                     <div className={styles.nav__item}>
-                        <Button color={"secondary"} variant={"none"}>
+                        <Button href={"mailto:nsammito@code0.tech"} color={"secondary"} variant={"none"}>
                             Contact
                         </Button>
                     </div>

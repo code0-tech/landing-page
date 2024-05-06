@@ -7,15 +7,29 @@ export const RoadMapSection: React.FC = () => {
         <Row>
             <h1 style={{color: "white", fontSize: "3rem"}}>Backend revolution <br/>in a
                 <span style={{color: "#70ffb2"}}> Roadmap</span></h1>
-            <Text size={"md"} mt={1} mb={2} display={"block"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                dolores et ea rebum.
+            <Text size={"md"} mt={1} mb={2} display={"block"} w={"100%"}>
+                Good products need time. We will work hard to release it a soon and good as possible.
             </Text>
             <Timeline/>
             {
-                [1, 2, 3, 4].map((item, index) => {
-                    return <Col key={item} xs={12} lg={3} mt={1} pos={"relative"}>
+                [{
+                    date: "Oktober 2024",
+                    title: "First test release",
+                    description: "In the test release we will check the main functionality. Mainly its about the flow builder and the execution over REST.",
+                }, {
+                    date: "January 2025",
+                    title: "First alpha release",
+                    description: "In the alpha phase we will introduce more features, fix bugs and increase user experience",
+                }, {
+                    date: "April 2025",
+                    title: "First beta release",
+                    description: "Now its time for MQTT and AMQP support. The focus will be the extension of our adapters.",
+                }, {
+                    date: "Mai 2025",
+                    title: "Full release self-hosted version",
+                    description: "Everything is bundled and shipped for the first release of our community edition in a self-hosted environment.",
+                }].map((item, index) => {
+                    return <Col key={index} xs={12} lg={3} mt={1} pos={"relative"}>
                         <div style={{
                             width: "0.5rem",
                             height: "0.5rem",
@@ -28,16 +42,16 @@ export const RoadMapSection: React.FC = () => {
                             transform: "translateX(-50%)"
                         }}/>
                         <Badge left={"50%"} style={{transform: "translateX(-50%)"}} mr={1} color={"info"}>
-                            Oktober 2024
+                            {item.date}
                         </Badge>
                         <Card mt={1} mb={2} color={"primary"}>
                             <Card.Section display="flex" border style={{alignItems: "center"}}>
-                                <Text size={"md"} hierarchy={"primary"}>Test Release</Text>
+                                <Text size={"md"} hierarchy={"primary"}>{item.title}</Text>
                             </Card.Section>
                             <Card.Section>
-                                <Text display={"block"} size={"xs"}>Lorem ipsum dolor sit amet, consetetur sadipscing
-                                    elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</Text>
+                                <Text display={"block"} size={"xs"}>
+                                    {item.description}
+                                </Text>
                             </Card.Section>
                         </Card>
                     </Col>

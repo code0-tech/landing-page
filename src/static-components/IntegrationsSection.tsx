@@ -12,7 +12,7 @@ import {
 export const IntegrationsSection: React.FC = () => {
 
     return <Container my={5}>
-        <Row>
+        <Row display="flex" justify="space-between">
             <Col xs={12} lg={4}>
                 <Row>
                     <Col xs={3}>
@@ -134,14 +134,30 @@ export const IntegrationsSection: React.FC = () => {
                     </Col>
                 </Row>
             </Col>
-            <Col xs={12} lg={8} ta={"right"}>
+            <Col xs={12} lg={6} mt={1}>
                 <h1 style={{color: "white", fontSize: "3rem"}}>Planned <br/>
-                    <span style={{color: "#70ffb2"}}>integrations </span> by us</h1>
+                    <span style={{color: "#70ffb2"}}>Extensions </span> by us</h1>
                 <Text size={"md"} mt={1} display={"block"}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                    dolores et ea rebum.
+                    We support dozen of APIs and endpoints directly out of the hood. With out open-source SDK everyone
+                    can contribute and publish there own extension.
                 </Text>
+                <ul>
+                    <li>
+                        <Text size={"lg"}>
+                            Self-host ready
+                        </Text>
+                    </li>
+                    <li>
+                        <Text size={"lg"}>
+                            Create your own extension with our open-source SDK
+                        </Text>
+                    </li>
+                    <li>
+                        <Text size={"lg"}>
+                            Input and output suggestions even for extensions
+                        </Text>
+                    </li>
+                </ul>
             </Col>
         </Row>
     </Container>

@@ -14,30 +14,28 @@ export const MainHeaderSection: React.FC = () => {
             </Badge>
             <h1 style={{marginTop: "1rem", color: "white", fontSize: "3rem"}}>Build <span
                 style={{color: "#70ffb2"}}>complex backends</span> <br/>in no-time</h1>
-            <Text mt={1} display={"block"} size={"md"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                ipsum dolor sit amet.</Text>
+            <Text mt={1} display={"block"} size={"md"}>
+                The backend world gets to the next era with the code0 no-code platform.
+                From database modelling to scalable backend endpoints in no-time all within our sleek and easy to use
+                dashboard made for everyone.
+                Everything is open source and with out Community Edition you can tryout our software locally.
+            </Text>
             <div style={{
                 display: "flex",
                 justifyContent: "center",
             }}>
-                <Link href={""}>
-                    <Button color={"info"} mt={1} mr={1}>
-                        <Button.Icon>
-                            <IconBrandDiscord size={16}/>
-                        </Button.Icon>
-                        Join our discord for early access
-                    </Button>
-                </Link>
-                <Link href={""}>
-                    <Button mt={1}>
-                        <Button.Icon>
-                            <IconMail size={16}/>
-                        </Button.Icon>
-                        Contact us via mail
-                    </Button>
-                </Link>
+                <Button href={"https://discord.com/invite/vsMtqBBqC7"} color={"info"} mt={1} mr={1}>
+                    <Button.Icon>
+                        <IconBrandDiscord size={16}/>
+                    </Button.Icon>
+                    Join our discord for early access
+                </Button>
+                <Button href={"mailto:nsammito@code0.tech"} mt={1}>
+                    <Button.Icon>
+                        <IconMail size={16}/>
+                    </Button.Icon>
+                    Contact us via mail
+                </Button>
             </div>
 
         </div>

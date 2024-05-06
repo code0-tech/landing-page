@@ -10,10 +10,25 @@ export const AdaptersSection: React.FC = () => {
                 <h1 style={{color: "white", fontSize: "3rem"}}>Planned <br/>
                     <span style={{color: "#70ffb2"}}>adapters </span> by us</h1>
                 <Text size={"md"} mt={1} display={"block"}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                    dolores et ea rebum.
+                    Adapters are the entry and trigger for the created flow. For the time being we are planning with three adapters.
                 </Text>
+                <ul>
+                    <li>
+                        <Text size={"lg"}>
+                            REST adapter to create endpoints rapidly fast
+                        </Text>
+                    </li>
+                    <li>
+                        <Text size={"lg"}>
+                            MQTT to subscribe to topics / events
+                        </Text>
+                    </li>
+                    <li>
+                        <Text size={"lg"}>
+                            AMQP to receive messages from a queueing service
+                        </Text>
+                    </li>
+                </ul>
             </Col>
             <Col xs={12} lg={4} mt={1}>
                 <Row>
@@ -26,15 +41,15 @@ export const AdaptersSection: React.FC = () => {
                 <Row>
                     <Col sm={12}>
                         <FlowCard parameters badge={"TRIGGER"} color={"secondary"}
-                                  title={"Representational State Transfer"}
-                                  description={"Build REST endpoints in seconds with integrated database and easy to use algorithms"}/>
+                                  title={"MQTT Subscribe to topic"}
+                                  description={"Subscribe to a MQTT protocol emitting service and build flows based on message"}/>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm={12}>
                         <FlowCard parameters badge={"TRIGGER"} color={"secondary"}
-                                  title={"Representational State Transfer"}
-                                  description={"Build REST endpoints in seconds with integrated database and easy to use algorithms"}/>
+                                  title={"AMQP Receive message"}
+                                  description={"Receive messages trough a AMQP queueing service and build flows based on message"}/>
                     </Col>
                 </Row>
             </Col>
