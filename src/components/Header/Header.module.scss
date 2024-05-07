@@ -19,13 +19,13 @@
   }
 
   &--full-height {
-    padding-bottom: unset;
+    padding: 0;
     display: flex;
     align-items: center;
     min-height: 100vh;
 
     &:before {
-      height: 200%;
+      height: 150%;
     }
   }
 
