@@ -7,6 +7,7 @@ import {FlowSection} from "@/static-components/FlowSection";
 import {IntegrationsSection} from "@/static-components/IntegrationsSection";
 import {AdaptersSection} from "@/static-components/AdaptersSection";
 import {CommunitySection} from "@/static-components/CommunitySection";
+import {OpenSourceSection} from "@/static-components/OpenSourceSection";
 
 const LandingPage: NextPage = () => {
 
@@ -15,6 +16,7 @@ const LandingPage: NextPage = () => {
         <Navigation/>
         <MainHeaderSection/>
         <FlowSection/>
+        <OpenSourceSection/>
         <IntegrationsSection/>
         <AdaptersSection/>
         <CommunitySection/>
