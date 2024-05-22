@@ -1,5 +1,5 @@
 .build-base:
-  image: node:20.9.0
+  image: node:20.13.1
   script:
     - npm ci
     - npm run build
