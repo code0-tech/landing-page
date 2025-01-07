@@ -13,19 +13,19 @@ export const RoadMapSection: React.FC = () => {
             <Timeline/>
             {
                 [{
-                    date: "Oktober 2024",
+                    date: "May 2025",
                     title: "First test release",
                     description: "In the test release we will check the main functionality. Mainly its about the flow builder and the execution over REST.",
                 }, {
-                    date: "January 2025",
+                    date: "August 2025",
                     title: "First alpha release",
                     description: "In the alpha phase we will introduce more features, fix bugs and increase user experience",
                 }, {
-                    date: "April 2025",
+                    date: "October 2025",
                     title: "First beta release",
                     description: "Now its time for MQTT and AMQP support. The focus will be the extension of our adapters.",
                 }, {
-                    date: "Mai 2025",
+                    date: "December 2025",
                     title: "Full release self-hosted version",
                     description: "Everything is bundled and shipped for the first release of our community edition in a self-hosted environment.",
                 }].map((item, index) => {
